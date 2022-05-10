@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Beetlebum Music News</title>
+	<link rel="icon" type="image/png" href=""/>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/style0.css">
+
+</head>
+<body onload="searchForArticles('music')">
+	<header id="MainHeader"><h1 id="HeadTitle">Beetlebum News</h1>
+
+		<nav class="main items">
+			<!-- <span class="simp" onclick="transitionToPage('index.html')">Home</span> -->
+			<a class="simple" href="index.html"><span data-hover="Home">Home</a>
+			<a class="simple active" href="articles.html" ><span data-hover="Articles">Articles</span></a>
+			<a class="simple" href="popular.html"><span data-hover="Most Read">Most Read</span></a>
+			<a class="simple" href="random.html"><span data-hover="Random">Random</span></a>
+			<!-- <a class="simple" href="about.html"><span data-hover="About"></span></a> --></nav>
+		</header>
+	<<div id="PageWrapper">
+		<div id="smallCarousels">
+	
+		<div id="bookCarousel" class="car col-2"><div id="carouselExampleIndicators2" class="carousel slide hi" data-ride="carousel" onclick="transitionToPage('music.html')">
+					  
+					  <div class="carousel-inner">
+					    <div class="carousel-item active" onclick="transitionToPage('')">
+					    	<!-- <p class="pictext">movie of the week</p> -->
+					      <img class="d-block w-100" src="../static/img/radiohead-nosurprises1.jpg" alt="Radiohead" title="Radiohead">
+					      
+					    </div>
+					    <div class="carousel-item">
+					      <img class="d-block w-100" src="../static/img/beetlebum-blur1.jpg" alt="Blur" title="Blur">
+					    </div>
+					    <div class="carousel-item">
+					      <img class="d-block w-100" src="../static/img/BeatlesRUN11.jpg" alt="The Beatles" title="The Beatles">
+					    </div>
+	
+					  </div>
+					 <div class="carouselTitle smallCT col-12">Music</div>
+					</div></div>
+		<div class="nonmaincar col-2">
+		<div id="musicCarousel" class="car col-6" onclick="transitionToPage('books.html')"><!-- <div id="carouselExampleIndicators2" class="carousel slide hi" data-ride="carousel"  > -->
+						
+					   <!-- <div class="carousel-inner">
+					    <div class="carousel-item active" onclick="transitionToPage('')">
+					      <img class="d-block w-100" src="../static/img/radiohead-nosurprises1.jpg" alt="Radiohead" title="Radiohead">
+					      
+					    </div>
+					    <div class="carousel-item">
+					      <img class="d-block w-100" src="../static/img/beetlebum-blur1.jpg" alt="Blur" title="Blur">
+					    </div>
+					    <div class="carousel-item">
+					      <img class="d-block w-100" src="../static/img/BeatlesRUN11.jpg" alt="The Beatles" title="The Beatles">
+					    </div>
+
+					  </div> -->
+				<div class="carouselTitle smallCTtitle col-12">Books</div>
+					<!-- </div> --></div>
+		<div id="movieCarousel" class="car col-6" onclick="transitionToPage('movies.html')"><!-- <div id="carouselExampleIndicators2" class="carousel slide hi" data-ride="carousel"  > -->
+					  
+					   <!-- <div class="carousel-inner">
+					    <div class="carousel-item active" onclick="transitionToPage('')">
+					      <img class="d-block w-100" src="../static/img/an-american-in-paris1.jpg" alt="An American in Paris" title="An American in Paris">
+					      
+					    </div>
+					    <div class="carousel-item">
+					      <img class="d-block w-100" src="../static/img/cabinet-of-dr-caligari1.jpg" alt="Cabinet of Dr Caligari" title="Cabinet of Dr Caligari">
+					    </div>
+					    <div class="carousel-item">
+					      <img class="d-block w-100" src="../static/img/twilight-of-the-ice-nymphs1.jpg" alt="Twilight of the Ice Nymphs" title="Twilight of the Ice Nymphs">
+					    </div>
+		
+					    
+					  </div> -->
+					<div class="carouselTitle smallCTtitle col-12">Movies</div>
+					<!-- </div> --></div>
+			</div>
+	</div>	
+
+		<section id="articleSec">
+			<div id="activeArticle"></div>
+			<div id = "gallery"></div>
+			<!-- <div class = "loader"></div> -->
+		</section>
+
+	</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>	
+	<script src="../static/js/script.js"></script>
+</body>
+</html>

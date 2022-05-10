@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Beetlebum News</title>
+	<link rel="icon" type="image/png" href=""/>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 	<link rel="stylesheet" href="../static/css/base.css">
+   <link rel="stylesheet" href="../static/css/vendor.css">  
+   <link rel="stylesheet" href="../static/css/main.css">
+   <script src="../static/js/modernizr.js"></script>
+	<script src="../static/js/pace.min.js"></script> -->
+
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/style0.css">
+
+
+</head>
+<body>
+	<header id="MainHeader"><h1 id="HeadTitle">Beetlebum News</h1>
+
+		<nav class="main items">
+			<!-- <span class="simp" onclick="transitionToPage('index.html')">Home</span> -->
+			<a class="simple" href="index.html"><span data-hover="Home">Home</a>
+			<a class="simple" href="articles.html" ><span data-hover="Articles">Articles</span></a>
+			<a class="simple" href="monthly.html"><span data-hover="This Month">This Month</span></a>
+			<a class="simple active" href="yourspace.html"><span data-hover="You">You</span></a>
+			<!-- <a class="simple" href="about.html"><span data-hover="About"></span></a> --></nav>
+
+		<div id="userStateOffline">
+			<a href="account.html" class=offlineTitle>you are offline</a>
+			<a href="account.html" class=offlineComment>login or register!</a>
+		</div>
+		<div id="userStateOnline" class="dontshow">
+					<a href="./account.html" class=onlineTitle>you are online</a>
+					<a href="./account.html" class=onlineComment>log out</a>
+				</div>
+		</header>
+
+	<div id="PageWrapperYou">
+		<h1 id="beatle">Offline User Detected</h1>
+		<p class="seethrough">you need to login or register in order to access this page</p>
+		<div id="registerButton" class="col-4" onclick="openRegister()">Register</div>
+		<div id="loginButton" class="col-4" onclick="openLogin()">Login</div>
+		<div id="registerForm" class="col-12 col-lg-4 dontshow">
+			
+  			<form action="/register" method = "POST" enctype="multipart/form-data">
+   				<label for="username">Username</label>
+  		  		<input type="text" id="registration_username" name="Username" placeholder="Your username">
+
+    			<label for="email">Email</label>
+    			<input type="text" id="registration_email" name="email" placeholder="Your email">
+
+    			<label for="password">Password</label>
+   				<input type="password" id="registration_password" name="password" placeholder="Your password">
+  
+    			<input type="submit" value="Register">
+    			<label for="login" onclick="openLogin()" class="right1">Login instead</label>
+ 			</form>
+		</div>
+		<div id="loginForm" class="col-12 col-lg-4 dontshow">
+
+  			<form action="">
+   				<label for="username">Username/Email</label>
+  		  		<input type="text" id="username" name="Username" placeholder="Your username or email">
+
+    			<label for="password">Password</label>
+   				<input type="password" id="password" name="password" placeholder="Your password">
+  
+    			<input type="submit" value="Login">
+    			<label for="login" onclick="openRegister()" class="right1">Register instead</label>
+ 			</form>
+		</div>
+	</section>
+	</div>
+	<div id="PageWrapperYou" class="dontshow">
+		<div class="uselessBorder">
+		<div class="uselessBorder">
+		<div class="uselessBorder">
+		<div class="uselessBorder">
+
+		<section id="articleSec">
+			<p id="recText">We recommend you read these:</p>
+
+			<div class="oneArc col-2">
+				<p class="arcTitle">The Melancholy of Romance</p>
+				<img class="arcImg col-12" src="../static/img/les-carabiniers.jpg"/>
+				<p class="summaryArc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod diam ut erat maximus faucibus. Vestibulum sollicitudin, felis quis euismod rhoncus</p>
+			</div>
+			<div class="oneArc col-2">
+				<p class="arcTitle">Haruki Murakami, are you okay?</p>
+				<img class="arcImg col-12" src="../static/img/les-carabiniers.jpg"/>
+				<p class="summaryArc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod diam ut erat maximus faucibus. Vestibulum sollicitudin, felis quis euismod rhoncus</p>
+			</div>
+			<div class="oneArc col-2">
+				<p class="arcTitle">Poetic Longing and Leornard Cohen</p>
+				<img class="arcImg col-12" src="../static/img/les-carabiniers.jpg"/>
+				<p class="summaryArc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod diam ut erat maximus faucibus. Vestibulum sollicitudin, felis quis euismod rhoncus</p>
+			</div>
+			<div class="oneArc col-2">
+				<p class="arcTitle">Matilda and Other Smart Girls</p>
+				<img class="arcImg col-12" src="../static/img/les-carabiniers.jpg"/>
+				<p class="summaryArc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod diam ut erat maximus faucibus. Vestibulum sollicitudin, felis quis euismod rhoncus</p>
+			</div>
+			<div class="oneArc col-2">
+				<p class="arcTitle">The Cranberries and Their Zombies</p>
+				<img class="arcImg col-12" src="../static/img/les-carabiniers.jpg"/>
+				<p class="summaryArc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod diam ut erat maximus faucibus. Vestibulum sollicitudin, felis quis euismod rhoncus</p>
+			</div>
+			<div class="oneArc col-2">
+				<p class="arcTitle">The Melancholy of Romance</p>
+				<img class="arcImg col-12" src="../static/img/les-carabiniers.jpg"/>
+				<p class="summaryArc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod diam ut erat maximus faucibus. Vestibulum sollicitudin, felis quis euismod rhoncus, orci quam viverra metus, ut lobortis erat massa vitae elit. Ut quis porta est. Sed at molestie magna. Vestibulum diam neque, iaculis nec dolor eu, elementum bibendum nunc.</p>
+			</div>
+			<div class="oneArc col-2">
+				<p class="arcTitle">The Melancholy of Romance</p>
+				<img class="arcImg col-12" src="../static/img/les-carabiniers.jpg"/>
+				<p class="summaryArc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod diam ut erat maximus faucibus. Vestibulum sollicitudin, felis quis euismod rhoncus, orci quam viverra metus, ut lobortis erat massa vitae elit. Ut quis porta est. Sed at molestie magna. Vestibulum diam neque, iaculis nec dolor eu, elementum bibendum nunc.</p>
+			</div>
+			<div class="oneArc col-2">
+				<p class="arcTitle">The Melancholy of Romance</p>
+				<img class="arcImg col-12" src="../static/img/les-carabiniers.jpg"/>
+				<p class="summaryArc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod diam ut erat maximus faucibus. Vestibulum sollicitudin, felis quis euismod rhoncus, orci quam viverra metus, ut lobortis erat massa vitae elit. Ut quis porta est. Sed at molestie magna. Vestibulum diam neque, iaculis nec dolor eu, elementum bibendum nunc.</p>
+			</div>
+			<div class="oneArc col-2">
+				<p class="arcTitle">The Melancholy of Romance</p>
+				<img class="arcImg col-12" src="../static/img/les-carabiniers.jpg"/>
+				<p class="summaryArc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod diam ut erat maximus faucibus. Vestibulum sollicitudin, felis quis euismod rhoncus, orci quam viverra metus, ut lobortis erat massa vitae elit. Ut quis porta est. Sed at molestie magna. Vestibulum diam neque, iaculis nec dolor eu, elementum bibendum nunc.</p>
+			</div>
+			<div class="oneArc col-2">
+				<p class="arcTitle">The Melancholy of Romance</p>
+				<img class="arcImg col-12" src="../static/img/les-carabiniers.jpg"/>
+				<p class="summaryArc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod diam ut erat maximus faucibus. Vestibulum sollicitudin, felis quis euismod rhoncus, orci quam viverra metus, ut lobortis erat massa vitae elit. Ut quis porta est. Sed at molestie magna. Vestibulum diam neque, iaculis nec dolor eu, elementum bibendum nunc.</p>
+			</div>
+		</section>
+
+	</div></div></div></div></div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="../static/js/script.js"></script>
+</body>
+</html>
