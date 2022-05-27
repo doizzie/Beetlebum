@@ -1,1 +1,1 @@
-# CinSense
+# Beetlebum News - Dominyka Lupeikytė 2022

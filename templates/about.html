@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Beetlebum News</title>
+	<link rel="icon" type="image/png" href=""/>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="fontawesome-free-5.15.1/css/all.css"> -->
+	<script src="https://kit.fontawesome.com/a6fa590169.js" crossorigin="anonymous"></script>
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/style0.css">
+
+</head>
+<body>
+	<!-- <div class="search-box">
+			    <button class="btn-search"><i class="fas fa-search"></i></button>
+			    <input type="text" class="input-search" placeholder="Type to Search...">
+			 </div> -->
+
+
+	<header id="MainHeader"><h1 id="HeadTitle">Beetlebum News</h1>
+
+		<nav class="main items">
+			<!-- <span class="simp" onclick="transitionToPage('index.html')">Home</span> -->
+			<a class="simple" href="index.html"><span data-hover="Home">Home</a>
+			<a class="simple" href="articles.html" ><span data-hover="Articles">Articles</span></a>
+			<a class="simple" href="popular.html"><span data-hover="Most Read">Most Read</span></a>
+			<a class="simple" href="random.html"><span data-hover="Random">Random</span></a>
+			<a class="simple active" href="about.html"><span data-hover="About">About</span></a>
+		</nav>
+
+    	<div class="box col-2">
+            <input id="searchWord" type="text" class="input" name="txt" >
+            <i id="smallSearchButton" class="fas fa-search" onclick="getValueSearch(1)"></i>
+         </div>
+		</header>
+
+	<section class="searchsec">
+	<div id="biggerSearch" class="col-9 dontshow">
+            <input id="searchWord1" type="text" class="input" name="txt">
+            <i id="bigSearchButton" class="fas fa-search" onclick="getValueSearch(2)"></i>
+		</div>
+	</section>
+	<div id="searching" class="dontshow">
+		<div id="foundNothing" class=afterarctext>Unfortunately we found nothing</div>
+		<div id="activeArticle1"></div>
+		<div id = "gallery1"></div>
+		<div class = "loader"></div>
+	</div>
+	<div id="PageWrapper">
+		<p id="contacts">
+			<a href="mailto:dominyka.lupeikyte@stud.vgtu.lt"><i class="fas fa-phone" alt="Phone"></i>
+			</a>
+			<a href="mailto:dominyka.lupeikyte@stud.vgtu.lt"><i class="fas fa-comment" alt="Chat"></i>
+			</a>
+			<a href="mailto:dominyka.lupeikyte@stud.vgtu.lt"><i class="fas fa-at" alt="Email"></i></a>
+		</p>
+		<h1 id="beatle">About</h1>
+		<p class="seethrough">the story of Beetlebum News</p>
+	<!-- <section class="borderr"> -->
+		
+		<p class="smallersec col-11 col-sm-9 col-md-5 col-lg-5" >
+		
+		This website was made by Dominyka Lupeikyte from Vilnius Gediminas Technical University (Vilnius Tech), as the final project for her Bachelor's Degree in Software Engineering.	
+		</p>
+		<p id="sign">Dominyka</p>
+
+
+	</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="../static/js/script.js"></script>
+	<!-- <script src="https://kit.fontawesome.com/2cd86d0939.js" crossorigin="anonymous"></script> -->
+</body>
+</html>

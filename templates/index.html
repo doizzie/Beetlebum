@@ -5,13 +5,20 @@
 	<title>Beetlebum News</title>
 	<link rel="icon" type="image/png" href=""/>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link rel="stylesheet" href="fontawesome-free-5.15.1/css/all.css"> -->
+	<script src="https://kit.fontawesome.com/a6fa590169.js" crossorigin="anonymous"></script>
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <link rel="stylesheet" href="../static/css/style.css">
     <link rel="stylesheet" href="../static/css/style0.css">
 
 </head>
 <body>
+	<!-- <div class="search-box">
+			    <button class="btn-search"><i class="fas fa-search"></i></button>
+			    <input type="text" class="input-search" placeholder="Type to Search...">
+			 </div> -->
+
+
 	<header id="MainHeader"><h1 id="HeadTitle">Beetlebum News</h1>
 
 		<nav class="main items">
@@ -20,18 +27,27 @@
 			<a class="simple" href="articles.html" ><span data-hover="Articles">Articles</span></a>
 			<a class="simple" href="popular.html"><span data-hover="Most Read">Most Read</span></a>
 			<a class="simple" href="random.html"><span data-hover="Random">Random</span></a>
-			<!-- <a class="simple" href="yourspace.html"><span data-hover="Our's Picks"></span></a> -->
-			<!-- <a class="simple" href="about.html"><span data-hover="About"></span></a> --></nav>
+			<a class="simple" href="about.html"><span data-hover="About">About</span></a>
+		</nav>
 
-		<!-- <div id="userStateOffline">
-			<a href="account.html" class=offlineTitle>you are offline</a>
-			<a href="account.html" class=offlineComment>login or register!</a>
-		</div>
-		<div id="userStateOnline" class="dontshow">
-					<a href="./account.html" class=onlineTitle>you are online</a>
-					<a href="./account.html" class=onlineComment>log out</a>
-				</div> -->
+    	<div class="box col-2">
+            <input id="searchWord" type="text" class="input" name="txt" >
+            <i id="smallSearchButton" class="fas fa-search" onclick="getValueSearch(1)"></i>
+         </div>
 		</header>
+
+	<section class="searchsec">
+	<div id="biggerSearch" class="col-9 dontshow">
+            <input id="searchWord1" type="text" class="input" name="txt">
+            <i id="bigSearchButton" class="fas fa-search" onclick="getValueSearch(2)"></i>
+		</div>
+	</section>
+	<div id="searching" class="dontshow">
+		<div id="foundNothing" class=afterarctext>Unfortunately we found nothing</div>
+		<div id="activeArticle1"></div>
+		<div id = "gallery1"></div>
+		<div class = "loader"></div>
+	</div>
 	<div id="PageWrapper">
 		<div id="activeArticle"></div>
 		<div id="indexPageContent">
@@ -49,12 +65,7 @@
 					    </div>
 					    <div class="carousel-item">
 					      <img class="d-block w-100" src="../static/img/twilight-of-the-ice-nymphs1.jpg" alt="Twilight of the Ice Nymphs" title="Twilight of the Ice Nymphs">
-					    </div>
-					    <!-- <div class="carousel-item">
-					      <img class="d-block w-100" src="../static/img/2001.jpg" alt="2001: A Space Odyssey" title="2001: A Space Odyssey">
-					    </div>
- -->
-					    
+					    </div>  
 					  </div>
 					<div class="carouselTitle col-12">Movies</div>
 					</div></div>
@@ -72,10 +83,7 @@
 					    <div class="carousel-item">
 					      <img class="d-block w-100" src="../static/img/the_girls_who_went_away1.jpg" alt="The Girls Who Went Away" title="The Girls Who Went Away">
 					    </div>
-					    <!-- <div class="carousel-item">
-					      <img class="d-block w-100" src="../static/img/2001.jpg" alt="2001: A Space Odyssey" title="2001: A Space Odyssey">
-					    </div>
- -->
+
 					   
 					  </div>
 					 <div class="carouselTitle col-12">Books</div>
@@ -84,7 +92,7 @@
 						
 					   <div class="carousel-inner">
 					    <div class="carousel-item active" onclick="transitionToPage('')">
-					    	<!-- <p class="pictext">movie of the week</p> -->
+
 					      <img class="d-block w-100" src="../static/img/radiohead-nosurprises1.jpg" alt="Radiohead" title="Radiohead">
 					      
 					    </div>
@@ -94,23 +102,17 @@
 					    <div class="carousel-item">
 					      <img class="d-block w-100" src="../static/img/BeatlesRUN11.jpg" alt="The Beatles" title="The Beatles">
 					    </div>
-					    <!-- <div class="carousel-item">
-					      <img class="d-block w-100" src="../static/img/2001.jpg" alt="2001: A Space Odyssey" title="2001: A Space Odyssey">
-					    </div>
- -->
+
 					  </div>
 				<div class="carouselTitle col-12">Music</div>
 					</div></div>
 	</div>
-	<!-- <section id="movieoftheweek" class="col-12 col-lg-12"><img class="w-100" src="https://i.imgur.com/JnkBMTN.jpg" alt="Movie of the week - "></section> -->
 
 	
 	<div class="mainContent">
 		<section id="movieofthemonth">
 			<div class="headcontainer" >
 				<p id="beatle">We recommend you read:</p>
-				<!-- <img class="he col-10 beatles" src="../static/img/beatles.jpg" alt="The Beatles"/> -->
-				<!-- <img class="hi col-lg-12 beatles" src="https://i.imgur.com/JnkBMTN.jpg" alt="The Beatles"/> -->
 				<div id="carouselExampleIndicators" class="carousel slide hi maincar" data-ride="carousel">
 				  <ol class="carousel-indicators">
 				    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -160,5 +162,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="../static/js/script.js"></script>
+	<!-- <script src="https://kit.fontawesome.com/2cd86d0939.js" crossorigin="anonymous"></script> -->
 </body>
 </html>
